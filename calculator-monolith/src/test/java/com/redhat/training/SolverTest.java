@@ -30,6 +30,16 @@ public class SolverTest {
     }
 
     @Test
+    public void solve_multiply() {
+        assertEquals(solverService.solve("4*2"), 8);
+    }
+    
+    @Test
+    public void solve_multiplication_overprioritize_addition() {
+        assertEquals(solverService.solve("10-5*3-2"), -7);
+    }
+
+    @Test
     public void solve_substract() {
         assertEquals(solverService.solve("5-3"), 2);
     }
